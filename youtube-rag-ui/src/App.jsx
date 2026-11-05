@@ -15,7 +15,7 @@ function App() {
     setIsProcessing(true);
     
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/process', {
+      const res = await fetch('https://youtubechatbot-ifof.onrender.com/api/process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url: videoUrl }),
@@ -45,7 +45,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://127.0.0.1:5000/api/chat', {
+      const res = await fetch('https://youtubechatbot-ifof.onrender.com/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question }),
